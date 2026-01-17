@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Create Your Collection — Kalainayam</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="theme-kalainayam">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">கலைநயம்</a>
+      <nav class="main-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="ai-analysis.html">AI Trend Analysis</a>
+        <a href="create-collection.html" class="active">Create Your Collection</a>
+        <a href="styles.html">Style Guide</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container collection-builder">
+    <h1>Create Your Collection</h1>
+    <p class="muted">Choose season, audience and price — the AI suggests designs, palettes and recommended materials aligned with market demand.</p>
+
+    <section class="insights" id="style-insights" aria-live="polite" style="margin-bottom: 3rem;">
+      <h2>Dataset Insights</h2>
+      <p class="muted small">Real-time statistics from 28,000+ women's clothing reviews to guide your collection.</p>
+      <!-- Populated by JavaScript -->
+    </section>
+
+    <form id="collection-form" class="collection-form" aria-label="Create collection form">
+      <div class="form-row">
+        <label>Season</label>
+        <select name="season" required>
+          <option value="spring">Spring</option>
+          <option value="summer">Summer</option>
+          <option value="autumn">Autumn</option>
+          <option value="winter">Winter</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>Target Audience</label>
+        <select name="audience" required>
+          <option value="women">Women 18–35</option>
+          <option value="premium">Premium Women 30–50</option>
+          <option value="petite">Petite Women</option>
+          <option value="plus">Plus Size Women</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>Price Range</label>
+        <select name="price" required>
+          <option value="budget">$</option>
+          <option value="mid">$–USD</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>Style Focus (optional)</label>
+        <select name="focus">
+          <option value="tailoring">Tailoring</option>
+          <option value="street">Streetwear</option>
+          <option value="romantic">Romantic</option>
+          <option value="minimal">Minimal</option>
+        </select>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn btn-primary" type="submit">Generate Suggestions</button>
+      </div>
+    </form>
+
+    <section class="suggestions" aria-live="polite">
+      <h2>AI Suggestions</h2>
+      <p class="muted small">Clear, human recommendations appear here. Use them as a direction for sketches, fabric selection, and initial costing.</p>
+
+      <div id="suggestions-grid" class="suggestions-grid">
+        <!-- JS populates suggestions -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>© <span id="year-cc"></span>கலைநயம்</div>
+    </div>
+  </footer>
+
+  <script src="../js/api.js" defer></script>
+  <script src="../js/renderResults.js" defer></script>
+  <script src="../js/charts.js" defer></script>
+  <script src="../js/script.js" defer></script>
+</body>
+</html>

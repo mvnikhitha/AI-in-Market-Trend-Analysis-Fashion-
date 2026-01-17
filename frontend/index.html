@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Kalainayam — AI-powered trend intelligence for fashion designers and brands. Get actionable insights on colors, fabrics, and styles." />
+  <title>Kalainayam — Fashion Intelligence & AI Trend Analysis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .hero-new {
+      background: linear-gradient(135deg, #4a0e1b 0%, #7b1127 100%);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+      margin-bottom: 0;
+    }
+    
+    .hero-new h1 {
+      font-size: 2.8rem;
+      margin: 0 0 1rem 0;
+    }
+    
+    .hero-new p {
+      font-size: 1.2rem;
+      margin: 0 0 2rem 0;
+      opacity: 0.95;
+    }
+    
+    .hero-new .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 0;
+    }
+
+    .fashion-gallery {
+      margin: 0;
+      padding: 2rem 0;
+      background: #f9f9f9;
+    }
+    
+    .gallery-header {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding: 0;
+    }
+    
+    .gallery-header h2 {
+      color: #4a0e1b;
+      font-size: 2.2rem;
+      margin: 0 0 0.5rem 0;
+      font-weight: 700;
+    }
+    
+    .gallery-header p {
+      color: #666;
+      font-size: 1.1rem;
+      margin: 0;
+    }
+    
+        .gallery-showcase {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin-top: 0;
+      align-items: stretch;
+      margin-bottom: 2rem;
+    }
+
+    .main-gallery-item {
+      position: relative;
+      border-radius: 0;
+      overflow: hidden;
+      height: 400px;
+      box-shadow: none;
+    }
+
+    .main-gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .main-gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .side-gallery {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      gap: 0;
+    }
+
+    .side-item {
+      position: relative;
+      border-radius: 0;
+      overflow: hidden;
+      box-shadow: none;
+      transition: all 0.3s ease;
+    }
+
+    .side-item:hover {
+      transform: none;
+    }
+
+    .side-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .side-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 0;
+      margin-top: 0;
+    }
+    
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 0;
+      box-shadow: none;
+      transition: all 0.3s ease;
+      aspect-ratio: 1 / 1;
+    }
+    
+    .gallery-item:hover {
+      transform: none;
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    
+    .gallery-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+      padding: 2rem 1.5rem 1.5rem;
+      color: white;
+      transform: translateY(100px);
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery-item:hover .gallery-overlay {
+      transform: translateY(0);
+    }
+    
+    .gallery-overlay h3 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+    
+    .gallery-overlay p {
+      margin: 0;
+      font-size: 0.9rem;
+      opacity: 0.95;
+      line-height: 1.4;
+    }
+
+    .stats-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0;
+      margin: 0;
+      padding: 3rem 0;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .stat-box {
+      text-align: center;
+      padding: 2rem;
+      background: white;
+    }
+
+    .stat-number {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #4a0e1b;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      color: #666;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-showcase {
+        grid-template-columns: 1fr;
+      }
+
+      .main-gallery-item {
+        height: 300px;
+      }
+
+      .hero-new h1 {
+        font-size: 2rem;
+      }
+
+      .hero-new .hero-ctas {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body class="theme-kalainayam">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><span class="brand-name">கலைநயம்</span></a>
+      <nav class="main-nav" aria-label="Main">
+        <a href="index.html" class="active">Home</a>
+        <a href="pages/ai-analysis.html">AI Trend Analysis</a>
+        <a href="pages/create-collection.html">Create Your Collection</a>
+        <a href="pages/styles.html">Style Guide</a>
+        <a href="pages/about.html">About</a>
+      </nav>
+            <div class="header-actions">
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-new container">
+      <h1>Fashion Intelligence Powered by AI</h1>
+      <p>Analyze trends, predict demand, and create collections that resonate with your market</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="pages/ai-analysis.html">View Trends</a>
+        <a class="btn btn-outline" style="background: white; color: #4a0e1b; border: none;" href="pages/create-collection.html">Create Collection</a>
+      </div>
+    </section>
+
+    <!-- Fashion Gallery Section -->
+    <section class="fashion-gallery">
+      <div class="container">
+        <div class="gallery-header">
+          <h2>Fashion Gallery</h2>
+          <p>Discover the latest styles and trends shaping the fashion world</p>
+        </div>
+
+        <!-- Main Showcase with Quote -->
+                <!-- Main Showcase -->
+        <div class="gallery-showcase">
+          <div class="main-gallery-item">
+            <img src="public/images/styles/fashion-1.png" alt="Fashion Trend 1" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+          </div>
+          <div class="main-gallery-item">
+            <img src="public/images/styles/fashion-2.png" alt="Fashion Trend 2" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+          </div>
+        </div>
+        <!-- Additional Gallery Items -->
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="public/images/styles/fashion-4.jpg" alt="Fashion Trend 4" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+            <div class="gallery-overlay">
+              <h3>Trendy Essentials</h3>
+              <p>This season's must-have pieces and styles</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="public/images/styles/fashion-5.jpg" alt="Fashion Trend 5" style="background: linear-gradient(135deg, #d4a574 0%, #b8956a 100%);">
+            <div class="gallery-overlay">
+              <h3>Classic Style</h3>
+              <p>Timeless designs that never go out of fashion</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="container">
+      <div class="stats-section">
+        <div class="stat-box">
+          <div class="stat-number">28K+</div>
+          <div class="stat-label">Reviews Analyzed</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">16</div>
+          <div class="stat-label">Fashion Classes</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">3.92/5</div>
+          <div class="stat-label">Avg Rating</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">64%</div>
+          <div class="stat-label">Recommendation Rate</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+      <div class="container">
+        <h2>How Kalainayam Works</h2>
+        <div class="steps-grid">
+          <div class="step">
+            <div class="icon">1</div>
+            <h3>Collect Data</h3>
+            <p class="muted small">Gather signals from social platforms, e-commerce activity, runway introductions, and retail performance.</p>
+          </div>
+          <div class="step">
+            <div class="icon">2</div>
+            <h3>AI Analysis</h3>
+            <p class="muted small">Identify rising silhouettes, color shifts, and material demand with precision and momentum.</p>
+          </div>
+          <div class="step">
+            <div class="icon">3</div>
+            <h3>Actionable Insights</h3>
+            <p class="muted small">Get practical guidance: designs, palettes, materials and price-positioning that align with demand.</p>
+          </div>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="pages/create-collection.html">Create Your Collection</a>
+          <a class="btn btn-outline" href="pages/styles.html">Explore Styles</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features-section">
+      <div class="container">
+        <h2>Why Designers Choose Kalainayam</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <h3>Real-time Trend Signals</h3>
+            <p class="muted small">Understand what's growing now and what is cooling down with clear growth indicators.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Color & Material Intelligence</h3>
+            <p class="muted small">Precise color palettes and fabric demand analysis to guide sourcing and sampling.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Actionable Collections</h3>
+            <p class="muted small">From season + audience + price range to suggested design direction in minutes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+      <div class="container">
+        <h2>Trusted by Designers & Brands</h2>
+        <div class="testimonials-grid">
+          <blockquote>
+            <p class="muted">"Kalainayam helped us align our capsule drop with market demand. Sell-through rose 28%."</p>
+            <footer class="muted small">Head of Design, Small Luxury Brand</footer>
+          </blockquote>
+          <blockquote>
+            <p class="muted">"The color palettes and fabric guidance made sample decisions faster and more confident."</p>
+            <footer class="muted small">Product Lead, DTC Label</footer>
+          </blockquote>
+          <blockquote>
+            <p class="muted">"We save 3 weeks on trend research every season with Kalainayam."</p>
+            <footer class="muted small">Creative Director, Fashion House</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+      <div class="container">
+        <h2>Weekly Fashion Intelligence</h2>
+        <p class="muted">Subscribe for a curated briefing on market movement and opportunities for your collections.</p>
+        <form id="home-subscribe" aria-label="Subscribe to newsletter">
+          <div class="newsletter-form">
+            <input type="email" placeholder="your@email.com" required>
+            <button class="btn btn-primary" type="submit">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>© <span id="footer-year"></span> Kalainayam</div>
+      <div class="muted small">Made for designers & brands — simple, actionable intelligence.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      const y = new Date().getFullYear();
+      document.querySelectorAll('[id$="-year"]').forEach(el=>el.textContent = y);
+    });
+  </script>
+  <script src="js/api.js" defer></script>
+  <script src="js/renderResults.js" defer></script>
+  <script src="js/charts.js" defer></script>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

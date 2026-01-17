@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Style Inspirations — Kalainayam</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .style-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    
+    .style-card {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: white;
+    }
+    
+    .style-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    
+    .style-image {
+      width: 100%;
+      height: 350px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 4rem;
+      font-weight: bold;
+    }
+    
+    .style-content {
+      padding: 1.5rem;
+    }
+    
+    .style-content h3 {
+      margin: 0 0 0.5rem 0;
+      color: #4a0e1b;
+      font-size: 1.3rem;
+    }
+    
+    .style-content p {
+      margin: 0 0 1rem 0;
+      color: #666;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    
+    .style-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .tag {
+      background: #f0f0f0;
+      color: #4a0e1b;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    
+    .style-button {
+      display: inline-block;
+      background: #4a0e1b;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: background 0.3s ease;
+    }
+    
+    .style-button:hover {
+      background: #7b1127;
+    }
+    
+    .style-hero {
+      background: linear-gradient(135deg, #4a0e1b 0%, #7b1127 100%);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+    }
+    
+    .style-hero h2 {
+      margin: 0 0 0.5rem 0;
+      font-size: 2.5rem;
+    }
+    
+    .style-hero p {
+      margin: 0;
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+  </style>
+</head>
+<body class="theme-kalainayam">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">கலைநயம்</a>
+      <nav class="main-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="ai-analysis.html">AI Trend Analysis</a>
+        <a href="create-collection.html">Create Your Collection</a>
+        <a href="styles.html" class="active">Style Guide</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="style-hero">
+      <h2>Style Inspirations</h2>
+      <p>Explore different fashion styles and find inspiration for your next collection</p>
+    </div>
+
+    <div class="style-grid">
+      
+            <!-- TAILORING STYLE -->
+      <div class="style-card">
+        <img src="../public/images/styles/tailoring.png" alt="Tailoring Style" style="width: 100%; height: 350px; object-fit: cover;">
+        <div class="style-content">
+          <h3>Tailoring</h3>
+          <p>Structured silhouettes, precise cuts, and impeccable fits. Perfect for professional and formal occasions.</p>
+          <div class="style-tags">
+            <span class="tag">Professional</span>
+            <span class="tag">Structured</span>
+            <span class="tag">Elegant</span>
+          </div>
+          <p style="font-size: 0.85rem; color: #999; margin-bottom: 0;">
+            🎯 Best for: Dresses, Blazers, Trousers<br/>
+            💰 Price: Premium<br/>
+            📊 Popularity: 5,431 reviews | ⭐ 3.89/5
+          </p>
+        </div>
+      </div>
+
+      <!-- STREETWEAR STYLE -->
+      <div class="style-card">
+        <img src="../public/images/styles/streetwear.png" alt="Streetwear Style" style="width: 100%; height: 350px; object-fit: cover;">
+        <div class="style-content">
+          <h3>Streetwear</h3>
+          <p>Casual, edgy, and urban. Comfortable pieces that make bold statements with attitude and flair.</p>
+          <div class="style-tags">
+            <span class="tag">Casual</span>
+            <span class="tag">Urban</span>
+            <span class="tag">Trendy</span>
+          </div>
+          <p style="font-size: 0.85rem; color: #999; margin-bottom: 0;">
+            🎯 Best for: Tops, Bottoms, Jackets<br/>
+            💰 Price: Mid-Range<br/>
+            📊 Popularity: 4,789 reviews | ⭐ 3.88/5
+          </p>
+        </div>
+      </div>
+
+      <!-- ROMANTIC STYLE -->
+      <div class="style-card">
+        <img src="../public/images/styles/romantic.png" alt="Romantic Style" style="width: 100%; height: 350px; object-fit: cover;">
+        <div class="style-content">
+          <h3>Romantic</h3>
+          <p>Soft, flowing, and feminine. Delicate details, luxurious fabrics, and dreamy aesthetics.</p>
+          <div class="style-tags">
+            <span class="tag">Feminine</span>
+            <span class="tag">Soft</span>
+            <span class="tag">Luxe</span>
+          </div>
+          <p style="font-size: 0.85rem; color: #999; margin-bottom: 0;">
+            🎯 Best for: Blouses, Dresses, Skirts<br/>
+            💰 Price: Premium<br/>
+            📊 Popularity: 3,245 reviews | ⭐ 3.95/5
+          </p>
+        </div>
+      </div>
+
+      <!-- MINIMAL STYLE -->
+      <div class="style-card">
+        <img src="../public/images/styles/minimal.png" alt="Minimal Style" style="width: 100%; height: 350px; object-fit: cover;">
+        <div class="style-content">
+          <h3>Minimal</h3>
+          <p>Clean lines, neutral colors, and timeless pieces. Less is more with refined simplicity.</p>
+          <div class="style-tags">
+            <span class="tag">Minimalist</span>
+            <span class="tag">Neutral</span>
+            <span class="tag">Timeless</span>
+          </div>
+          <p style="font-size: 0.85rem; color: #999; margin-bottom: 0;">
+            🎯 Best for: Basics, Knits, Tunics<br/>
+            💰 Price: Mid-Range<br/>
+            📊 Popularity: 2,876 reviews | ⭐ 4.01/5
+          </p>
+        </div>
+      </div>
+
+      <!-- BOHEMIAN STYLE -->
+      <div class="style-card">
+        <img src="../public/images/styles/bohemian.png" alt="Bohemian Style" style="width: 100%; height: 350px; object-fit: cover;">
+        <div class="style-content">
+          <h3>Bohemian</h3>
+          <p>Artistic and free-spirited. Vibrant prints, layered pieces, and natural textures inspire wanderlust.</p>
+          <div class="style-tags">
+            <span class="tag">Artistic</span>
+            <span class="tag">Prints</span>
+            <span class="tag">Natural</span>
+          </div>
+          <p style="font-size: 0.85rem; color: #999; margin-bottom: 0;">
+            🎯 Best for: Dresses, Tunics, Scarves<br/>
+            💰 Price: Mid-Range<br/>
+            📊 Popularity: 2,134 reviews | ⭐ 3.82/5
+          </p>
+        </div>
+      </div>
+
+      <!-- SPORTY STYLE -->
+      <div class="style-card">
+        <img src="../public/images/styles/sporty.png" alt="Sporty Style" style="width: 100%; height: 350px; object-fit: cover;">
+        <div class="style-content">
+          <h3>Sporty</h3>
+          <p>Active and athletic. Performance fabrics and comfort-first designs for the modern athlete.</p>
+          <div class="style-tags">
+            <span class="tag">Athletic</span>
+            <span class="tag">Comfort</span>
+            <span class="tag">Active</span>
+          </div>
+          <p style="font-size: 0.85rem; color: #999; margin-bottom: 0;">
+            🎯 Best for: Activewear, Leggings, Tops<br/>
+            💰 Price: Mid-Range<br/>
+            📊 Popularity: 1,945 reviews | ⭐ 4.12/5
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Style Combinations Guide -->
+    <section style="margin-top: 4rem; background: #f9f9f9; padding: 2rem; border-radius: 12px;">
+      <h2 style="color: #4a0e1b; margin-top: 0;">🎨 Style Combination Guide</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+        
+        <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #4a0e1b;">
+          <h4 style="margin: 0 0 0.5rem 0; color: #4a0e1b;">Classic Professional</h4>
+          <p style="margin: 0; font-size: 0.9rem; color: #666;">Tailoring + Minimal = Structured elegance for office wear</p>
+        </div>
+        
+        <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #e74c3c;">
+          <h4 style="margin: 0 0 0.5rem 0; color: #e74c3c;">Modern Urban</h4>
+          <p style="margin: 0; font-size: 0.9rem; color: #666;">Streetwear + Minimal = Contemporary and cool</p>
+        </div>
+        
+        <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #e88ba8;">
+          <h4 style="margin: 0 0 0.5rem 0; color: #e88ba8;">Romantic Date Night</h4>
+          <p style="margin: 0; font-size: 0.9rem; color: #666;">Romantic + Tailoring = Elegant femininity</p>
+        </div>
+        
+        <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #d4a574;">
+          <h4 style="margin: 0 0 0.5rem 0; color: #d4a574;">Boho Chic</h4>
+          <p style="margin: 0; font-size: 0.9rem; color: #666;">Bohemian + Romantic = Artistic and dreamy</p>
+        </div>
+        
+        <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #3498db;">
+          <h4 style="margin: 0 0 0.5rem 0; color: #3498db;">Active Casual</h4>
+          <p style="margin: 0; font-size: 0.9rem; color: #666;">Sporty + Streetwear = Comfortable and on-trend</p>
+        </div>
+        
+        <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #27ae60;">
+          <h4 style="margin: 0 0 0.5rem 0; color: #27ae60;">Eclectic Mix</h4>
+          <p style="margin: 0; font-size: 0.9rem; color: #666;">Blend any styles = Your unique personal aesthetic</p>
+        </div>
+        
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>© <span id="year-styles"></span> Kalainayam</div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      const y = new Date().getFullYear();
+      document.querySelectorAll('[id$="-year"]').forEach(el=>el.textContent = y);
+    });
+  </script>
+</body>
+</html>
